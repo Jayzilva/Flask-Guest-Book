@@ -1,5 +1,5 @@
 **To Run**
-`flask run`
+` python app/__init__.py`
 
 --- 
 **Prerequisites & Packages**
@@ -7,9 +7,7 @@
 - Create a virtual environment `python -m venv env`
 - Actiavte virtual environment `source env/Scripts/activate`
 - Install Flask ` pip install flask`
-- Install Flask RESTX `pip install flask-restx`
-- Install Flask SQL Alchemy `pip install flask-sqlalchemy`
-- Install Environmental varibales `pip install python-dotenv`
+
 
 --- 
 - To on the debug mode have to mention `FLASK_DEBUG=True`` as on .flaskenv file

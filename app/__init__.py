@@ -14,7 +14,7 @@ def home():
     
 @app.route("/place/<place>")
 def location(place):
-    return "<h2>You are on the" + place +"Page</h2>"
+    return "<h2>You are on the " + place +" Page</h2>"
 
 if __name__ == "__main__": #if call directly from the CMD
     app.run(debug=True)
