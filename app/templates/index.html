@@ -1,24 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    {% if myvar%}
-    <h1>Example Template</h1>
-    <h2>The varible passed in : {{ myvar }}</h2>
-    
-    {% else %}
-    <h2>No varible passed in</h2>
-    {% endif %}
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/HILynX3Dsoc?si=5L9bnw9yvPHtveZY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
 
+    <title>Guest Book</title>
 
-    {%for link in links %}
-    <a href="{{link}}">Link</a>
-    {% endfor%}
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque arcu nulla, pellentesque a urna eu, pretium imperdiet augue. Ut egestas quam id tristique varius. Nullam ultricies dignissim leo, ac laoreet ipsum placerat sed. Phasellus eleifend turpis tempor nisl tempor scelerisque. Aliquam erat volutpat. Fusce et enim et dolor efficitur dictum at eget elit. Nullam lorem nisi, semper ac ipsum ac, posuere blandit lectus. Integer eu ex massa. In erat enim, maximus eu dolor auctor, maximus auctor sem. Curabitur imperdiet ex metus, id imperdiet ipsum blandit at. Integer dolor felis, feugiat nec elementum pellentesque, rhoncus ut tortor. Ut lacus metus, bibendum non tempus sed, dictum ut turpis. Donec aliquam hendrerit ante, elementum rutrum justo bibendum quis. Proin commodo, nisl eget ornare tempor, dui ex molestie massa, ut sollicitudin enim mi ut mauris. Vivamus ac elit at nunc pellentesque venenatis sed in magna.</p>
-</body>
+    <!-- Bootstrap core CSS -->
+    <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet"> 
+    <!-- Bootstrap theme -->
+    <link href="{{ url_for('static', filename='css/bootstrap-theme.min.css') }}" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="{{ url_for('static', filename='css/theme.css') }}" rel="stylesheet">
+
+  </head>
+
+  <body>
+
+    <div class="container theme-showcase" role="main">
+
+      <div class="jumbotron">
+        <h1>Guest Book</h1>
+      <a type="button" class="btn btn-link" href="{{ url_for('sign') }}">Sign the Guest Book</a>
+      </div>
+
+      <div class="page-header">
+        <h1>Name</h1>
+      </div>
+      <div class="well">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed diam eget risus varius blandit sit amet non magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Cras mattis consectetur purus sit amet fermentum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Aenean lacinia bibendum nulla sed consectetur.</p>
+      </div>
+
+    </div> <!-- /container -->
+
+  </body>
 </html>
