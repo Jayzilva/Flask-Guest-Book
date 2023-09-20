@@ -11,25 +11,23 @@
     <title>Sign the Guest Book</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
 
-    <!-- Custom styles for this template -->
-    <link href="{{ url_for('static', filename='css/sign.css') }}" rel="stylesheet">
   </head>
 
   <body>
 
     <div class="container">
 
-      <form class="form-signin">
+      <form class="form-signin" method="post" action="/process">
         <h2 class="form-signin-heading">Sign the Guest Book</h2>
         <div class="form-group">
           <label for="inputName" class="sr-only">Name</label>
-          <input type="text" id="inputName" class="form-control" placeholder="Name" required autofocus>
+          <input type="text" id="inputName" name="name" class="form-control" placeholder="Name" required autofocus>
         </div>
         <div class="form-group">
           <label for="comment" class="sr-only">Comment:</label>
-            <textarea class="form-control" rows="5" id="comment" placeholder="Comment" required></textarea>
+            <textarea class="form-control" rows="5" name="comment" id="comment" placeholder="Comment" required></textarea>
         </div>
         <button class="btn btn-lg btn-primary btn-block" type="submit">Sign</button>
       </form>
