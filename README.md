@@ -7,8 +7,9 @@
 - Create a virtual environment `python -m venv env`
 - Actiavte virtual environment `source env/Scripts/activate`
 - Install Flask ` pip install flask`
-
-
+- Interact with the DB `pip install flask-sqlalchemy`
+---
+Used MySQL as Databse - with "https://www.freemysqlhosting.net/"
 --- 
 - To on the debug mode have to mention `FLASK_DEBUG=True`` as on .flaskenv file
 
